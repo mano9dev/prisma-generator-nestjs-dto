@@ -175,8 +175,7 @@ export const makeHelpers = ({
   const fieldsToEntityProps = (fields: ParsedField[]) =>
     `${each(fields, (field) => fieldToEntityProp(field), '\n')}`;
 
-  const apiExtraModels = (names: string[]) =>
-    `@ApiExtraModels(${names.map(entityName)})`;
+  const apiExtraModels = (names: string[]) => `@ApiExtraModels(${names})`;
 
   return {
     config: {
